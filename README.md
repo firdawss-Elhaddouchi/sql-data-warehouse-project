@@ -1,29 +1,75 @@
-# Data Warehouse and Analytics Project
+# SQL Data Warehouse and Analytics Project
 
-Welcome to this **Data Warehouse and Analytics Project** repository
+## Overview
+Welcome to the **Data Warehouse and Analytics Project**! 🚀  
+This project demonstrates a complete data warehousing solution, from building a data warehouse to generating actionable business insights. Designed as a portfolio project, it highlights **industry best practices in Data Engineering and Analytics**.
 
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project highlights industry best practices in data engineering and analytics.
+The main goal is to consolidate sales data from multiple sources, create a business-ready data model, and enable analytical queries for reporting and decision-making.
 
-## Project Requirements
+---
 
-### Building the Data Warehouse (Data Engineering)
+## Data Architecture
 
-### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-makin
+The project follows the **Medallion Architecture** with three layers:
 
-#### Specifications
-. **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-. **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-. **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-. **Scope**: Focus on the latest dataset only; historization of data is not required.
-. **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+- **Bronze Layer**: Stores raw data as-is from source systems (CSV files).  
+- **Silver Layer**: Cleanses, standardizes, and normalizes data for analysis.  
+- **Gold Layer**: Houses business-ready tables using a **Star Schema**, including fact and dimension tables optimized for analytics.
 
-### BI: Analytics & Reporting (Data Analytics)
+### Project Structure
 
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-. **Customer Behavior**
-. **Product Performance**
-. **Sales Trends**
+![Project Structure](docs/project_structure.png)
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+*Figure 1: Structure of the SQL Data Warehouse project showing Bronze, Silver, and Gold layers.*
+
+---
+
+## ETL Pipeline
+
+The ETL process is divided into three main stages:
+
+1. **Extract**: Load raw data from ERP and CRM CSV files.  
+2. **Transform**: Clean, standardize, and combine datasets.  
+3. **Load**: Populate the **Gold layer** with fact and dimension tables for analysis.
+
+---
+
+## Data Modeling
+
+- **Dimension Tables**:
+  - `dim_customers` – Customer descriptive information.
+  - `dim_products` – Product descriptive information.
+
+- **Fact Tables**:
+  - `fact_sales` – Stores transactional sales events.
+
+This model allows analysis of:
+
+- Customer behavior and segmentation
+- Product performance
+- Sales trends over time
+
+
+---
+
+## Tools & Technologies
+
+- **SQL Server / T-SQL**
+- **SQL Server Management Studio (SSMS)**
+- **Draw.io** – For architecture, flow, and model diagrams
+- **Notion** – Project organization and task management
+- **Git & GitHub** – Version control and collaboration
+
+---
+
+## How to Run the Project
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/firdawss-Elhaddouchi/sql-data-warehouse-project.git
+
+
+## Acknowledgements
+
+This project was inspired by the tutorial and resources provided by [Baraa Khatib Salkini](https://www.youtube.com/@DataWithBaraa). Some scripts and datasets were adapted from the original material.
