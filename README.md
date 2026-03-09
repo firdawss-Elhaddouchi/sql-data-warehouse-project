@@ -68,7 +68,7 @@ This model allows analysis of:
 
 ```bash
 git clone https://github.com/firdawss-Elhaddouchi/sql-data-warehouse-project.git
-
+```
 
 ## Acknowledgements
 
